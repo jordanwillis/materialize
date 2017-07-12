@@ -662,7 +662,7 @@
       // Add initial multiple selections.
       if (multiple) {
         $select.find("option:selected:not(:disabled)").each(function () {
-          var index = $(this).index();
+          var index = $select.find("option").index($(this));
 
           toggleEntryFromArray(valuesSelected, index, $select);
           options.find("li").eq(index).find(":checkbox").prop("checked", true);
